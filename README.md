@@ -9,14 +9,16 @@ In order to get accesst to the site witht the password generator, a link will be
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+ Include screenshots as needed.
+Here is a link to see the screenshot.
+![OpenSesameImage](https://github.com/maritzadiaz77/OpenSesame/assets/144579638/a33d5d45-4bd0-48b4-8880-8f3680507cea)
+Here is the path on github to teh screenshot. Develop/Assets/Images/OpenSesameImage.jpg
+And here is a link to the deployed applications
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
 
 ## Credits
 Extensively used stack overflow and W3schools for reference and help on code.
 ## License
 
 There is no license.
+

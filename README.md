@@ -17,7 +17,7 @@ And here is a link to the deployed applications
 
 
 ## Credits
-Extensively used stack overflow and W3schools for reference and help on code.
+Extensively used stack overflow and W3schools for reference and help on code. Tutor asked me questions that helped me understand how to get started.
 ## License
 
 There is no license.

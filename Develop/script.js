@@ -1,20 +1,20 @@
 //Assignment code here//
-// Below, we are referring to the id #generate in the html. Then, we are giving that id, once clicked, to hear the "click" to write password.
+// Below, we are referring to the id #generate in the html. Then, we are giving that id, once clicked, to hear the "click" to write password. We are telling it to run the function writePassword on line 76.
 document.querySelector("#generate").addEventListener("click", writePassword);
 
-//These are 4 arrays that contain sets of characters. They contain lower case letters, upper case letters, numbers, and special characters that we are able to use.REFERENCED JAVASCRIPT ACTIVITIES.
+//There are 4 variables and they are named similar to their contents.They contain 4 arrays that each contain a set of ordered objects. They contain lower case letters, upper case letters, numbers, and special characters that we are able to use.REFERENCED JAVASCRIPT ACTIVITIES. The data type they contain are strings, which are in quotation marks.
 var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,];
 var specialChar = ["!", "$", "@", "#", "$", "%", "^", "=", "+", "-",]
 
 
-// This is part of the prompt that the user will have to participate in.This function wil be called on later.
+// This is a function called generate password.This is part of the prompt that the user will have to participate in.This function wil be called on later.
 function generatePassword() {
   // Line 15 delcares a variable named confirmLength and assigns it the result of a prompt dialog telling user to choose a legnth between 8 and 128.
   var confirmLength = (prompt("Choose a legnth between 8 and 128 characters"));
 
-  // This loop will keep looping as long as the string in the parenthesis is true.//
+  // This loop will keep looping as long as the string in the parenthesis is true. Incorrect if <=8 or >=128. BEacuse that's not what we're asking for!//
   while (confirmLength <= 8 || confirmLength >= 128) {
     alert("Passwords length is incorrect");
     // This will keep looping until user enters the correct number that the prompt is asking for.
@@ -48,7 +48,6 @@ function generatePassword() {
   if (confirmNumericCharacter) {
     passwordCharacters = passwordCharacters.concat(numbers)
   }
-
   if (confirmLowerCase) {
     passwordCharacters = passwordCharacters.concat(lowerCaseLetters)
   }
@@ -57,11 +56,11 @@ function generatePassword() {
   }
   // This will console log what is inside the passwordcharacters that will be used to create user's random passwords.
   console.log(passwordCharacters)
-// This is and empty string so tht it can generate a random password.
+// This is and empty string so that it can generate a random password.
   var randomPassword = ""
 
 
-  // FOUND MATH.FLOOR(MATH.RANDOM() ON STACK OVERFLOW
+  // FOUND MATH.FLOOR(MATH.RANDOM() ON STACK OVERFLOW. ASK tutor to clarify this part again,but Stack overflow has this info.>>>>>GO OVER THIS AGAIN!!!still a bit confusing.<<<<<<<
   for (var i = 0; i < confirmLength; i++) {
     randomPassword = randomPassword + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
     // I can consolelog this to check the state of my randomPassword on inspect.
@@ -71,11 +70,19 @@ function generatePassword() {
   return randomPassword;
 }
 
-// This bottom part was already completed for us
-// write password to the password input.
+// This bottom part was already completed for us..............
+// write password to the password input.btw this function is called writepassword.
 function writePassword() {
+  // We need to create a function for generate password!!Producing output of whatever is generating random password ^n line 70.
+
+  // with tutor we deleted generate password(), and replace with 79. it was
+  // var password = 79    <--- we erased generatePassword(), so straight up gave us 79 in the text box!
   var password = generatePassword();
+  // passwordText is telling document to look for #password.THEN we want to change its value.
   var passwordText = document.querySelector("#password");
+  // changing the value here of our putput.WIth tutor I changed this to a string. And it did all the random password function for nothing and gave me this string. The password variable does exist, it just wasn't doing anything.Ran through logic of generating password for nothing.
+  // (commented passwordText.value=password; during example using my name)
+  // passwordText.value= "Maritza";
   passwordText.value = password;
 
 }

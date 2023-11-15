@@ -13,7 +13,7 @@ In order to get accesst to the site witht the password generator, a link will be
 Here is a link to see the screenshot.
 ![OpenSesameImage](https://github.com/maritzadiaz77/OpenSesame/assets/144579638/a33d5d45-4bd0-48b4-8880-8f3680507cea)
 Here is the path on github to the screenshot. Develop/Assets/Images/OpenSesameImage.jpg
-And here is a link to the deployed applications
+https://maritzadiaz77.github.io/OpenSesame/  
 
 
 
